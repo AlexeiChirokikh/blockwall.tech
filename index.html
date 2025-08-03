@@ -19,36 +19,30 @@
       color: #fff;
       padding: 20px 30px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
       flex-wrap: wrap;
-    }
-
-    .logo-container {
-      display: flex;
+      justify-content: space-between;
       align-items: center;
+      text-align: center;
     }
 
     .logo-container img {
       width: 60px;
       height: auto;
-      margin-right: 15px;
     }
 
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .header-center {
+      flex: 1 1 100%;
+      margin-top: 10px;
     }
 
-    .header-text h1 {
+    .header-center h1 {
+      margin: 10px 0 5px;
+      font-size: 1.8rem;
+    }
+
+    .header-center p {
       margin: 0;
-      font-size: 1.6rem;
-    }
-
-    .header-text p {
-      margin: 4px 0 0;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #ccc;
     }
 
@@ -138,6 +132,10 @@
       .menu-toggle {
         display: block;
       }
+
+      .header-center {
+        order: 3;
+      }
     }
   </style>
 </head>
@@ -146,10 +144,11 @@
   <header>
     <div class="logo-container">
       <img src="blockwall_logo.png" alt="Blockwall Logo" />
-      <div class="header-text">
-        <h1>Blockwall Technologies</h1>
-        <p>Innovating the Future with Blockchain and Digital Assets</p>
-      </div>
+    </div>
+
+    <div class="header-center">
+      <h1>Blockwall Technologies</h1>
+      <p>Innovating the Future with Blockchain and Digital Assets</p>
     </div>
 
     <nav>
