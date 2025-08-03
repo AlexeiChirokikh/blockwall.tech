@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blockwall Technologies</title>
+  <title>Blockwall Technologies Inc.</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -17,38 +17,42 @@
     header {
       background-color: #2f2f2f;
       color: #fff;
-      padding: 20px 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+      padding: 30px;
       text-align: center;
+      position: relative;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 30px;
+      left: 30px;
     }
 
     .logo-container img {
-      width: 60px;
+      width: 90px;
       height: auto;
     }
 
     .header-center {
-      flex: 1 1 100%;
-      margin-top: 10px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .header-center h1 {
-      margin: 10px 0 5px;
-      font-size: 1.8rem;
+      margin: 0;
+      font-size: 2.2rem;
     }
 
     .header-center p {
-      margin: 0;
-      font-size: 0.95rem;
+      margin-top: 10px;
+      font-size: 1rem;
       color: #ccc;
     }
 
     nav {
-      display: flex;
-      align-items: center;
+      position: absolute;
+      top: 30px;
+      right: 30px;
     }
 
     .nav-links {
@@ -113,16 +117,21 @@
     }
 
     @media (max-width: 768px) {
+      nav {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+      }
+
       .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
         background-color: #2f2f2f;
         margin-top: 10px;
       }
 
       .nav-links a {
-        margin: 10px;
+        margin: 10px 0;
       }
 
       .nav-links.active {
@@ -133,8 +142,14 @@
         display: block;
       }
 
-      .header-center {
-        order: 3;
+      .logo-container {
+        position: static;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .logo-container img {
+        width: 80px;
       }
     }
   </style>
