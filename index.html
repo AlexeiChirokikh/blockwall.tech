@@ -17,19 +17,26 @@
     header {
       background-color: #2f2f2f;
       color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
     }
 
     header img {
-      width: 120px;
+      width: 60px;
       height: auto;
-      margin-bottom: 15px;
+      margin-right: 20px;
     }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: 2rem;
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .header-text p {
+      margin: 4px 0 0;
+      font-size: 0.95rem;
+      color: #ddd;
     }
 
     main {
@@ -74,8 +81,10 @@
 
   <header>
     <img src="blockwall_logo.png" alt="Blockwall Logo" />
-    <h1>Blockwall Technologies Inc.</h1>
-    <p>Innovating the Future with Blockchain and Digital Assets</p>
+    <div class="header-text">
+      <h1>Blockwall Technologies</h1>
+      <p>Innovating the Future with Blockchain and Digital Assets</p>
+    </div>
   </header>
 
   <main>
