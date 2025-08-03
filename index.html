@@ -35,30 +35,50 @@
       margin-right: 15px;
     }
 
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .header-text h1 {
       margin: 0;
       font-size: 1.6rem;
     }
 
     .header-text p {
-      margin: 2px 0 0;
+      margin: 4px 0 0;
       font-size: 0.9rem;
       color: #ccc;
     }
 
     nav {
-      margin-top: 10px;
+      display: flex;
+      align-items: center;
     }
 
-    nav a {
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links a {
       color: #ddd;
       text-decoration: none;
       margin-left: 20px;
       font-size: 0.95rem;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
     }
 
     main {
@@ -98,16 +118,25 @@
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
-      nav {
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
         width: 100%;
-        text-align: center;
-        margin-top: 15px;
+        background-color: #2f2f2f;
+        margin-top: 10px;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 10px 10px;
+      .nav-links a {
+        margin: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
       }
     }
   </style>
@@ -119,13 +148,17 @@
       <img src="blockwall_logo.png" alt="Blockwall Logo" />
       <div class="header-text">
         <h1>Blockwall Technologies</h1>
-        <p>Blockchain & Digital Asset Innovation</p>
+        <p>Innovating the Future with Blockchain and Digital Assets</p>
       </div>
     </div>
+
     <nav>
-      <a href="#welcome">Welcome</a>
-      <a href="#vision">Vision</a>
-      <a href="#contact">Contact</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#welcome">Welcome</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -152,6 +185,13 @@
   <footer>
     &copy; 2025 Blockwall Technologies. All rights reserved.
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
