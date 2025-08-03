@@ -1,2 +1,2 @@
 # blockwall.tech
-Ststic pages for www.blockwall.tech
+Static pages for www.blockwall.tech
