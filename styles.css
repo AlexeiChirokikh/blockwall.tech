@@ -17,12 +17,13 @@ body {
 
 header {
   background: linear-gradient(to right, #1a1a1d, #2c2c34);
-  padding: 20px 40px;
+  padding: 20px 40px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   border-bottom: 1px solid #333;
+  position: relative;
 }
 
 .logo {
@@ -59,6 +60,23 @@ nav {
 
 .nav-links a:hover {
   color: #00bcd4;
+}
+
+.header-center {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header-center h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00bcd4;
+}
+
+.header-center p {
+  font-size: 1.1rem;
+  color: #ccc;
 }
 
 .hero {
@@ -128,5 +146,13 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .header-center h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-center p {
+    font-size: 1rem;
   }
 }
