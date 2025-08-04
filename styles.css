@@ -21,7 +21,7 @@ header {
 
 .header-flex {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /* Align top */
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -56,6 +56,7 @@ header {
 .hero-text {
   flex: 1;
   margin-left: 20px;
+  align-self: flex-start;
 }
 
 .hero-text h1 {
