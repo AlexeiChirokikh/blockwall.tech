@@ -5,25 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blockwall Technologies Inc.</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo, .header-center, nav {
+      display: flex;
+      align-items: center;
+    }
+    .header-center {
+      flex-grow: 1;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+      }
+      .header-center {
+        margin: 20px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="blockwall_logo.png" alt="Blockwall Logo" />
-    </div>
-    <nav>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="solutions.html">Solutions</a>
-        <a href="#contact">Contact</a>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="blockwall_logo.png" alt="Blockwall Logo" />
       </div>
-    </nav>
-    <div class="header-center">
-      <h1>Blockwall Technologies</h1>
-      <p>Innovating the Future with Blockchain and Digital Assets</p>
-      <a class="cta-button" href="#solutions">Explore Solutions</a>
+      <div class="header-center">
+        <h1>Blockwall Technologies</h1>
+        <p>Innovating the Future with Blockchain and Digital Assets</p>
+        <a class="cta-button" href="#solutions">Explore Solutions</a>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </div>
   </header>
 
