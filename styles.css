@@ -32,14 +32,8 @@ header {
 }
 
 .logo img {
-  width: 60px;
+  width: 150px;
   margin-right: 15px;
-}
-
-.logo-text {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #ffffff;
 }
 
 nav {
@@ -154,5 +148,9 @@ footer {
 
   .header-center p {
     font-size: 1rem;
+  }
+
+  .logo img {
+    width: 120px;
   }
 }
