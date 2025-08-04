@@ -16,17 +16,19 @@ body {
 header {
   background: linear-gradient(to right, #1a1a1d, #2c2c34);
   padding: 20px 40px 60px;
+  border-bottom: 1px solid #333;
+}
+
+.header-flex {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  border-bottom: 1px solid #333;
-  position: relative;
 }
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo img {
@@ -34,41 +36,53 @@ header {
   margin-right: 15px;
 }
 
-nav {
-  margin-top: 10px;
-}
-
-.nav-links {
+.main-nav {
   display: flex;
   gap: 20px;
+  align-items: flex-start;
 }
 
-.nav-links a {
+.main-nav a {
   color: #aaa;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.main-nav a:hover {
   color: #00bcd4;
 }
 
-.header-center {
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+.hero-text {
+  flex: 1;
+  margin-left: 20px;
 }
 
-.header-center h1 {
+.hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #00bcd4;
 }
 
-.header-center p {
+.hero-text p {
   font-size: 1.1rem;
   color: #ccc;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0194a0;
 }
 
 main {
@@ -110,19 +124,20 @@ footer {
   border-top: 1px solid #333;
 }
 
-@media (max-width: 600px) {
-  .nav-links {
+@media (max-width: 768px) {
+  .header-flex {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    text-align: center;
   }
 
-  .header-center h1 {
-    font-size: 1.8rem;
+  .hero-text {
+    margin: 20px 0 0;
   }
 
-  .header-center p {
-    font-size: 1rem;
+  .main-nav {
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .logo img {
