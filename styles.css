@@ -31,13 +31,8 @@ header {
   align-items: flex-start;
 }
 
-.logo a {
-  display: inline-block;
-}
-
 .logo img {
   width: 150px;
-  height: auto;
   margin-right: 15px;
 }
 
@@ -54,8 +49,10 @@ header {
   transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a.active {
   color: #00bcd4;
+  text-decoration: underline;
 }
 
 .hero-text {
@@ -110,6 +107,33 @@ section h2 {
 section p {
   font-size: 1rem;
   color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1f23;
+  color: #eaeaea;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #00bcd4;
+}
+
+.contact-info {
+  margin-top: 20px;
+  color: #bbb;
 }
 
 a {
