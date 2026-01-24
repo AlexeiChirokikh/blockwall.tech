@@ -52,9 +52,15 @@
           event.preventDefault();
           
           const form = event.target;
-          const name = form.querySelector('#name').value;
-          const email = form.querySelector('#email').value;
-          const message = form.querySelector('#message').value;
+          const name = form.querySelector('#name').value.trim();
+          const email = form.querySelector('#email').value.trim();
+          const message = form.querySelector('#message').value.trim();
+          
+          // Validate inputs
+          if (!name || !email || !message) {
+            alert('Please fill in all fields.');
+            return;
+          }
           
           // Create mailto link with pre-filled subject and body
           const subject = encodeURIComponent('Contact Form Submission from ' + name);
@@ -66,12 +72,18 @@
           
           const mailtoLink = 'mailto:info@blockwall.tech?subject=' + subject + '&body=' + body;
           
+          // Remove any existing confirmation message
+          const existingConfirmation = form.parentNode.querySelector('.form-confirmation');
+          if (existingConfirmation) {
+            existingConfirmation.remove();
+          }
+          
           // Open email client
           window.location.href = mailtoLink;
           
           // Show confirmation message
           const confirmation = document.createElement('p');
-          confirmation.className = 'contact-info';
+          confirmation.className = 'contact-info form-confirmation';
           confirmation.style.marginTop = '20px';
           confirmation.style.color = '#00bcd4';
           confirmation.textContent = 'Your email client should open. If it doesn\'t, please email us directly at info@blockwall.tech';
