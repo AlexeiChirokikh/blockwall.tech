@@ -154,8 +154,6 @@ footer {
   border-top: 1px solid #333;
 }
 
-// ... existing code up to line 155 ...
-
 .section-highlight {
   background-color: #1a1a1d;
   padding: 30px;
@@ -193,9 +191,6 @@ footer {
   color: #ccc;
   font-size: 0.95rem;
 }
-
-// ... rest of existing code ...
-  
 
 @media (max-width: 768px) {
   .header-flex {
