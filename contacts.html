@@ -34,8 +34,7 @@
       <h2>Contact Us</h2>
       <p>If you have questions, business inquiries, or want to collaborate—reach out to us.</p>
 
-      <!-- TODO: Replace 'your-form-id' with your actual Formspree form ID -->
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
 
@@ -47,6 +46,43 @@
 
         <button type="submit" class="cta-button">Send Message</button>
       </form>
+
+      <script>
+        function handleFormSubmit(event) {
+          event.preventDefault();
+          
+          const form = event.target;
+          const name = form.querySelector('#name').value;
+          const email = form.querySelector('#email').value;
+          const message = form.querySelector('#message').value;
+          
+          // Create mailto link with pre-filled subject and body
+          const subject = encodeURIComponent('Contact Form Submission from ' + name);
+          const body = encodeURIComponent(
+            'Name: ' + name + '\n\n' +
+            'Email: ' + email + '\n\n' +
+            'Message:\n' + message
+          );
+          
+          const mailtoLink = 'mailto:info@blockwall.tech?subject=' + subject + '&body=' + body;
+          
+          // Open email client
+          window.location.href = mailtoLink;
+          
+          // Show confirmation message
+          const confirmation = document.createElement('p');
+          confirmation.className = 'contact-info';
+          confirmation.style.marginTop = '20px';
+          confirmation.style.color = '#00bcd4';
+          confirmation.textContent = 'Your email client should open. If it doesn\'t, please email us directly at info@blockwall.tech';
+          form.parentNode.insertBefore(confirmation, form.nextSibling);
+          
+          // Reset form after a short delay
+          setTimeout(() => {
+            form.reset();
+          }, 1000);
+        }
+      </script>
 
       <p class="contact-info">
         <strong>Email:</strong> <a href="mailto:info@blockwall.tech">info@blockwall.tech</a><br />
