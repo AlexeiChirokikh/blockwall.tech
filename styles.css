@@ -145,6 +145,36 @@ a:hover {
   text-decoration: underline;
 }
 
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.solution-card {
+  background-color: #1a1a1d;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+.solution-card h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.solution-card p {
+  font-size: 0.95rem;
+}
+
 footer {
   text-align: center;
   padding: 20px;
